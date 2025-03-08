@@ -1,0 +1,95 @@
+.restaurant-profile {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ff8800;
+    color: white;
+    padding: 15px;
+}
+.navbar-title {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .nav-right {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .nav-right .nav-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .nav-right.nav-btn:hover {
+    background: #218838;
+  }
+
+/* Profile Section */
+.profile-section, .add-dish-section, .dishes-list {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.profile-section h3, .add-dish-section h3, .dishes-list h3 {
+    color: #333;
+}
+
+.profile-section input, .add-dish-section input, .add-dish-section textarea, .add-dish-section select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #ff8800;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background: #ff6600;
+}
+
+/* Image preview */
+.profile-image, .dish-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Dish List */
+.dishes-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.dish-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}

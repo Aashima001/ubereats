@@ -19,7 +19,7 @@ function Login() {
     
             if (response.data.message === 'Login successful') {
                 console.log("Login successful! Redirecting...");
-                navigate("/dashboard");
+                navigate("/restaurantprofile");;
             }
         } catch (err) {
             console.error("Login failed:", err.response?.data?.message || err);
