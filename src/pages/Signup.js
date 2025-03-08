@@ -9,9 +9,18 @@ function Signup() {
     const [error, setError] = useState("");
     const navigate = useNavigate();
 
-    const handleSignup = (e) => {
+    const validateEmail = (email) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      };
+
+    const handleSignup = async(e) => {
         e.preventDefault();
 
+        if (!validateEmail(email)) {
+            setError("Invalid email format");
+            return;
+        }
         if (!name || !email || !password) {
             setError("All fields are required");
             return;

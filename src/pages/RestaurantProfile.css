@@ -1,6 +1,8 @@
 .restaurant-profile {
     font-family: Arial, sans-serif;
     padding: 20px;
+    background: rgba(0, 0, 0, 0.7) url('../assets/background.jpg') no-repeat center center/cover;
+    background-blend-mode: darken;
 }
 
 /* Navbar */
@@ -8,7 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #ff8800;
+    background: black;
     color: white;
     padding: 15px;
 }
@@ -58,7 +60,6 @@
 }
 
 button {
-    background: #ff8800;
     color: white;
     padding: 10px;
     border: none;
@@ -66,9 +67,6 @@ button {
     width: 100%;
 }
 
-button:hover {
-    background: #ff6600;
-}
 
 /* Image preview */
 .profile-image, .dish-image {

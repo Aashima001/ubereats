@@ -58,7 +58,7 @@ function AddRestaurantPage() {
         console.error("Login failed:", err.response?.data?.message || err);
         setError(err.response?.data?.message || 'Login failed');
     }
-      alert("Signup successful! Redirecting to login...");
+      alert("Welcome to Uber Eats...");
       navigate("/loginrestaurant");
   };
 

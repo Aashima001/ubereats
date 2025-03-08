@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import "./RestaurantProfile.css";
+import { useNavigate } from 'react-router-dom';
 
-function RestaurantProfile() {
+const RestaurantProfile = () =>  {
   const [restaurant, setRestaurant] = useState({
-    name: "Your Restaurant",
-    location: "City, Country",
+    name: "My Pizza Place",
+    location: "San Jose, United States",
     description: "Delicious meals served fresh!",
     contact: "123-456-7890",
     timings: "10:00 AM - 11:00 PM",
     image: "",
   });
+  const navigate = useNavigate();
 
   const [dishes, setDishes] = useState([]);
   const [newDish, setNewDish] = useState({
@@ -43,8 +45,9 @@ function RestaurantProfile() {
       {/* Navbar */}
       <div className="navbar">
       <div className="navbar-title">Uber Eats for Merchants</div>
-       <div className="nav-right" >
-        <button className="nav-btn" onClick={() => navigate('/loginrestaurant')}>Logout</button>
+      <div className="nav-right">
+        <button className="nav-btn" onClick={() => navigate('/login')}>Logout</button>
+        <button className="nav-btn" onClick={() => navigate('/ordermanagement')}>Orders</button>
       </div>
     </div>
       {/* Restaurant Profile Section */}

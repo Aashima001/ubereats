@@ -111,7 +111,6 @@ font-weight:bold;
   color: #ff8800;
 }
 button {
-  background-color: #ff8800;
   color: white;
   border: none;
   padding: 12px 20px;
@@ -121,9 +120,6 @@ button {
   width: 100%;
 }
 
-button:hover {
-  background-color: #ff6600;
-}
 
 /* Error messages */
 .error-text {
