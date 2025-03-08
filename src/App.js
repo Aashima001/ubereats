@@ -6,6 +6,9 @@ import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import AddRestaurantPage from "./pages/AddRestaurantPage";
 import LoginRestaurant from "./pages/loginrestaurant";
+import RestaurantProfile from "./pages/RestaurantProfile";
+import OrderManagement from "./pages/OrderManagement";
+import CustomerProfile from "./pages/CustomerProfile";
 
 function App() {
     return (
@@ -17,6 +20,9 @@ function App() {
                 <Route path="/AddRestaurantPage" element={<AddRestaurantPage />} />
                 <Route path="/LoginRestaurant" element={<LoginRestaurant />} />
                 <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/restaurantprofile" element={<RestaurantProfile />} />
+                <Route path="/ordermanagement" element={<OrderManagement />} />
+                <Route path="/customerprofile" element={<CustomerProfile />} />
             </Routes>
         </Router>
     );
