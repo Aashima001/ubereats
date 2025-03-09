@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { FaBars, FaSearch, FaShoppingCart, FaHeart, FaWallet, FaSignOutAlt } from "react-icons/fa";
+import { FaBars, FaSearch, FaShoppingCart, FaHeart, FaSignOutAlt } from "react-icons/fa";
 import "./Dashboard.css";
 
 function Dashboard() {
@@ -9,12 +9,30 @@ function Dashboard() {
     const searchQuery = new URLSearchParams(location.search).get("search");
     const [userName, setUserName] = useState("");
     const [menuOpen, setMenuOpen] = useState(false);
+    const [favorites, setFavorites] = useState([]);
+
     useEffect(() => {
         const storedUser = localStorage.getItem("userName");
         if (storedUser) {
             setUserName(storedUser);
         }
+    
+
+    const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
+        setFavorites(storedFavorites);
     }, []);
+
+    const toggleFavorite = (restaurantId) => {
+        let updatedFavorites;
+        if (favorites.includes(restaurantId)) {
+            updatedFavorites = favorites.filter(id => id !== restaurantId);
+        } else {
+            updatedFavorites = [...favorites, restaurantId];
+        }
+        setFavorites(updatedFavorites);
+        localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+    };
+
     // Dummy categories and restaurants (Replace with API calls)
     const categories = [
         { name: "Grocery", icon: "/images/grocery.jpg" },
@@ -53,12 +71,11 @@ return (
                     <div className="dropdown-menu">
                         <div className="user-info">
                         <p className="user-name>">{userName ? userName : "Guest"}</p>
-                        <p className="manage-account">Manage account</p>
-                        </div>
-                        <button onClick={() => navigate('/ordermanagement')}><FaShoppingCart/>Orders</button>
+                    </div>
+                        <button onClick={() => navigate('/manageaccount')}>ManageAccount</button>
+                        <button onClick={() => navigate('/orderhistory')}><FaShoppingCart/>Orders</button>
                         <button onClick={() => navigate('/favorites')}><FaHeart/> Favorites</button>
-                        <button onClick={() => navigate('/wallet')}><FaWallet/>Wallet</button>
-                        <button onClick={() => navigate('/logout')}><FaSignOutAlt/>Sign Out</button>
+                        <button onClick={() => navigate('/')}><FaSignOutAlt/>Sign Out</button>
                     </div>
                 )}
             </div>
@@ -70,7 +87,7 @@ return (
             </div>
             <div className="nav-right">
             <button className="cart-btn">
-            <button onClick={() => navigate('/shoppingcart')}><FaShoppingCart/></button>
+            <button onClick={() => navigate('/shoppingcart')}><FaShoppingCart color="black"/></button>
             </button>
             </div>
             
@@ -95,7 +112,11 @@ return (
                         <div className="restaurant-info">
                             <h3>{res.name}</h3>
                             <p>{res.category}</p>
-                            </div>
+                        </div>
+                            <button className="favorite-btn" onClick={() => toggleFavorite(res.id)}>
+                                <FaHeart size={20} color={favorites.includes(res.id) ? "red" : "grey"} />
+                            </button>
+                            
                     </div>
                 ))
             ) : (

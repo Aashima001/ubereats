@@ -60,7 +60,7 @@ function Feed() {
                     </button>
                 </div>
                 <div className="nav-right">
-                <button className="cart-btn">
+                <button className="cart-btn" onClick={() => navigate('/shoppingcart')}>
                     <FaShoppingCart size={22} color="#fff" />
                 </button>
                 </div>

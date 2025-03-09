@@ -1,0 +1,104 @@
+/* Order History Container */
+.order-history-container {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 15px 20px;
+}
+
+.menu-btn,
+.cart-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar h2 {
+    margin: 0;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown-menu button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    text-align: left;
+}
+
+.dropdown-menu button:hover {
+    background: #f0f0f0;
+}
+
+/* Orders List */
+.orders-list {
+    margin-top: 20px;
+}
+
+.no-orders {
+    text-align: center;
+    font-size: 18px;
+    color: gray;
+}
+
+/* Order Card */
+.order-card {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.order-card h3 {
+    margin-bottom: 5px;
+}
+
+.order-card h4 {
+    margin-top: 10px;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.order-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.order-card li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.order-card li:last-child {
+    border-bottom: none;
+}
+
+.total-amount {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}

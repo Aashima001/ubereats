@@ -66,7 +66,7 @@ function AddRestaurantPage() {
       <div className="signup-container">
           <div className="navbar">
               <div className="navbar-title">
-                <a href="/" className="home-link"> Uber Eats</a></div>
+                <a href="/" className="home-link"> Uber Eats for Merchants</a></div>
               <div className="nav-right">
               <button className="nav-btn" onClick={() => navigate('/loginrestaurant')}>Login</button>
           </div>
@@ -87,6 +87,8 @@ function AddRestaurantPage() {
             }/>
               <input type="text" placeholder="Detected Location" value={restaurantlocation} readOnly/>
               <button className="signup-btn" onClick={handleSignup}>Create Account</button>
+              <p>Already have an account? <a href="/loginrestaurant">Login</a></p>
+         
           </div>
       </div>
   );

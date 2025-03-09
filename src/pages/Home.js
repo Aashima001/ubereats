@@ -52,7 +52,7 @@ function Home() {
                 </div>
                 {/* Search Bar */}
                 <div className="search-bar">
-                    <input type="text" placeholder="Browse restaurants & dishes..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
+                    <input type="text" placeholder="Browse food" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
                     <button className="search-btn" onClick={handleSearch}>
                         <FaSearch size={16} />
                     </button>

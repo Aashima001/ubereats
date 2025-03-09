@@ -1,0 +1,122 @@
+.checkout {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+}
+
+.checkout-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    color: #007aff;
+    cursor: pointer;
+}
+
+.checkout-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Left Section */
+.checkout-left {
+    width: 60%;
+}
+
+.section {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.option-btn {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    margin-top: 5px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.option-btn.selected {
+    border-color: black;
+    font-weight: bold;
+}
+
+.fast-tag {
+    color: green;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.add-payment-btn {
+    width: 100%;
+    padding: 10px;
+    background: none;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.continue-payment-btn {
+    width: 100%;
+    padding: 12px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.continue-payment-btn:hover {
+    opacity: 0.8;
+}
+
+/* Right Section */
+.checkout-right {
+    width: 35%;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.restaurant-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.restaurant-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.cart-summary {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.order-total p {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.total {
+    font-size: 18px;
+    font-weight: bold;
+}
