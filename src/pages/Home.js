@@ -30,7 +30,7 @@ function Home() {
 
         setSearchResults(filteredResults);
         if (filteredResults.length > 0) {
-            navigate(`/restaurantdashboard/${filteredResults[0].id}`);
+            navigate(`/feed/${filteredResults[0].id}`);
         }
     };
 
