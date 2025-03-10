@@ -10,11 +10,11 @@ import RestaurantProfile from "./pages/RestaurantProfile";
 import OrderManagement from "./pages/OrderManagement";
 import CustomerProfile from "./pages/CustomerProfile";
 import ShoppingCart from "./pages/ShoppingCart";
-import Payment from "./pages/Payment";
+import OrderConfirmation from "./pages/OrderConfirmation";
 import OrderHistory from "./pages/OrderHistory";
 import Favorites from "./pages/Favorites";
 import ManageAccount from "./pages/ManageAccount";
-import RestaurantDashboard from "./pages/RestaurantDasboard";
+import RestaurantDashboard from "./pages/RestaurantDashboard";
 import Feed from "./pages/Feed";
 import Checkout from "./pages/Checkout";
 
@@ -32,13 +32,14 @@ function App() {
                 <Route path="/ordermanagement" element={<OrderManagement />} />
                 <Route path="/customerprofile" element={<CustomerProfile />} />
                 <Route path="/shoppingcart" element={<ShoppingCart />} />
-                <Route path="/payment" element={<Payment />} />
+                <Route path="/orderconfirmation" element={<OrderConfirmation />} />
                 <Route path="/orderhistory" element={<OrderHistory />} />
                 <Route path="/favorites" element={<Favorites />} />
                 <Route path="/manageaccount" element={<ManageAccount />} />
                 <Route path="/restaurantdashboard" element={<RestaurantDashboard />} />
                 <Route path="/feed" element={<Feed />} />
                 <Route path="/checkout" element={<Checkout />} />
+
             </Routes>
         </Router>
     );
