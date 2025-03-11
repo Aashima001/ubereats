@@ -1,0 +1,79 @@
+/* Body style */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: black;
+    padding: 10px 20px;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navbar-title {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Login container */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7) url('../assets/background.jpg') no-repeat center center/cover;
+    background-blend-mode: darken;
+}
+
+/* Login form styling */
+.login-form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form input:focus {
+    border-color: #ff8800;
+}
+
+.login-form .login-btn {
+    background-color: #ff8800;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.login-form .login-btn:hover {
+    background-color: #ff6600;
+}

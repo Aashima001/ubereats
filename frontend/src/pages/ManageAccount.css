@@ -1,0 +1,104 @@
+.account-container {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: black;
+  color: white;
+  padding: 20px;
+  height: 100vh;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.sidebar li.active {
+  background-color: #333;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.profile-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.upload-btn {
+  display: inline-block;
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.upload-btn input {
+  display: none;
+}
+
+.info-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input-field {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.save-button-container {
+  text-align: center;
+}
+
+.save-button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

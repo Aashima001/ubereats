@@ -1,0 +1,133 @@
+/* Order Management Container */
+.orders-container {
+    display: flex;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 150px;  /* Adjusted width */
+    min-width:50px;
+    background: black;
+    color: white;
+    padding: 15px;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar h2 {
+    color: #28a745;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.sidebar li {
+    padding: 10px 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-radius: 5px;
+}
+
+.sidebar li:hover,
+.sidebar li.active {
+    background: #28a745;
+}
+
+/* Orders Content - Centers Everything */
+.orders-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content */
+    justify-content: center; /* Centers vertically */
+    text-align: center;
+    padding: 30px;
+    background: #f9f9f9;
+    margin-left: 220px;
+    width: calc(100% - 220px);
+    overflow-y: auto;
+}
+
+/* Order Management Title */
+.orders-content h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Filter Section */
+.filter-section {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    width: 80%;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+.filter-section input,
+.filter-section select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* Orders Grid */
+.orders-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  /* Ensures orders stay centered */
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Order Card */
+.order-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: left;
+}
+
+.order-card:hover {
+    transform: translateY(-3px);
+    transition: 0.3s;
+}
+
+/* Order Status Colors */
+.order-card .status {
+    font-weight: bold;
+}
+
+/* Button */
+button {
+    background: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button:hover {
+    background: #218838;
+}

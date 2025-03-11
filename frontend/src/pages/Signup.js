@@ -1,0 +1,66 @@
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";  // <-- Add this line
+import "./Signup.css";
+
+function Signup() {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
+    const navigate = useNavigate();
+
+    const validateEmail = (email) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    };
+
+    const handleSignup = async (e) => {
+        e.preventDefault();
+
+        if (!validateEmail(email)) {
+            setError("Invalid email format");
+            return;
+        }
+        if (!name || !email || !password) {
+            setError("All fields are required");
+            return;
+        }
+
+        try {
+            const response = await axios.post("http://localhost:5001/api/auth/signup", {
+                name,
+                email,
+                password,
+            });
+
+            if (response.data.success) {
+                console.log("Signup successful! Redirecting...");
+                navigate("/login");
+            }
+        } catch (error) {
+            console.error("Signup failed:", error);
+            setError("Signup failed. Please try again.");
+        }
+    };
+
+    return (
+        <div className="signup-container">
+            <div className="navbar">
+                <div className="navbar-title">
+                    <a href="/" className="home-link"> Uber Eats</a>
+                </div>
+            </div>
+            <div className="signup-form">
+                <h2>Signup</h2>
+                {error && <p className="error-message">{error}</p>}
+                <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} />
+                <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                <button className="signup-btn" onClick={handleSignup}>Create Account</button>
+            </div>
+        </div>
+    );
+}
+
+export default Signup;
